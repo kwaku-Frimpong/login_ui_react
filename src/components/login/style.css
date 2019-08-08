@@ -1,0 +1,134 @@
+.main-container{
+  width: 100vw;
+  height: 100vh;
+}
+
+.centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered.vertical{
+  flex-direction: column;
+}
+
+.auth-container{
+  width: 700px;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+  position: relative;
+  overflow: scroll;
+}
+
+.form-container{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.form-container.movable{
+  position: absolute;
+  left: 50%;
+  transition: all 0.4s;
+}
+
+.login-form{
+  transform:translateX(0%);
+  transition: all 0.4s;
+}
+
+.signup-form{
+  transform: translateX(-50%);
+  transition: all 0.4s;
+}
+
+/*showing sign up form*/
+.auth-container.sign-up>.form-container.form-container.movable{
+  left: 0;
+}
+
+.auth-container.sign-up .login-form{
+  transform: translateX(50%);
+}
+
+.auth-container.sign-up .signup-form{
+  transform: translateX(0%);
+}
+/*showing sign up form*/
+
+.divider{
+  width: 100%;
+  color: white;
+}
+
+.divider>div{
+  height: 3px;
+  flex:1;
+  background-color: white;
+}
+
+input[type=email],input[type=password]{
+  font-size: 1.2em;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+.btn{
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-success{
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-outline{
+  border: 1px solid white;
+  color: white;
+  background-color: #f07136;
+}
+
+.bg-colored{
+  background-color: #f07136;
+}
+
+/* facebook button*/
+.btn-fb {
+  color: white;
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.btn-fb:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.btn-fb:hover,
+.btn-fb:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+/*google button*/
+.btn-google {
+  color: white;
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.btn-google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.btn-google:hover,
+.btn-google:focus {
+  background: #E74B37;
+}
